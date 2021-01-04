@@ -4,11 +4,12 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import localeFr from "@angular/common/locales/fr";
 import { registerLocaleData } from "@angular/common";
+import { CbPipe } from "./cb.pipe";
 registerLocaleData(localeFr);
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent, CbPipe],
   bootstrap: [AppComponent],
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }]
 })
